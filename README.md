@@ -202,7 +202,7 @@ sudo systemctl restart apache2  # For Apache
 Verify Installation: Open your web browser and navigate to **http://your_domain_or_ip** to check if the application is running.
 
 [📺](https://github.com/g0k1/love-stresser) Preview
-Check out the preview video for a walkthrough of the website setup and features.
+Check out the [preview video](https://www.youtube.com/watch?v=Y5-9QIq_HeA) for a walkthrough of the website setup and features.
 
 [⚠️](https://github.com/g0k1/love-stresser) Notes
 Permissions: Ensure the server has the necessary permissions for the application files.
