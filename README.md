@@ -36,7 +36,7 @@ ssh username@your_server_ip
 ```
 ### 2. Install Required Software
 
-For Nginx
+#### For Nginx
 Install Nginx:
 ```bash
 sudo apt update
@@ -52,7 +52,8 @@ Install phpMyAdmin:
 sudo apt install phpmyadmin
 ```
 
-Configure Nginx: Create a configuration file:
+#### Configure Nginx: 
+Create a configuration file:
 ```bash
 sudo nano /etc/nginx/sites-available/love-stresser
 ```
@@ -87,7 +88,7 @@ Enable the Configuration:
 sudo ln -s /etc/nginx/sites-available/love-stresser /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 ```
-For Apache
+#### For Apache
 Install Apache:
 ```bash
 sudo apt update
@@ -101,7 +102,8 @@ Install phpMyAdmin:
 ```bash
 sudo apt install phpmyadmin
 ```
-Configure Apache: Create a configuration file:
+#### Configure Apache: 
+Create a configuration file:
 ```bash
 sudo nano /etc/apache2/sites-available/love-stresser.conf
 ```
@@ -135,7 +137,7 @@ sudo git clone https://github.com/yourusername/love-stresser-me.git love-stresse
 ### 4. Configure the Application
 Update Configuration Files:
 
-#### love-stresser.me/html: Edit line 8 in html/config.js to set your Discord webhook URL.
+**love-stresser.me/html:** Edit line 8 in **html/config.js** to set your Discord webhook URL.
 ```javascript
 const webhookUrl = "YOUR_DISCORD_WEBHOOK";
 love-stresser.me/IP/index.php: Update lines 511-514 with your domain names.
@@ -144,13 +146,13 @@ love-stresser.me/IP/index.php: Update lines 511-514 with your domain names.
 <option value="yourdomain1.com" class="domain">yourdomain1.com</option>
 <option value="yourdomain2.com" class="domain">yourdomain2.com</option>
 ```
-#### love-stresser.me/componements/php/api_token.php: Set your custom API token.
+**love-stresser.me/componements/php/api_token.php:** Set your custom API token.
 ```php
 <?php
 $token = 'YOUR_CUSTOM_API_TOKEN';
 ?>
 ```
-#### love-stresser.me/componements/php/database_conn.php: Configure your database connection details.
+**love-stresser.me/componements/php/database_conn.php:** Configure your database connection details.
 ```php
 <?php
 $servername = "localhost";
@@ -159,7 +161,7 @@ $password = "YOUR_DATABASE_PASSWORD";
 $dbname = "YOUR_DATABASE_NAME";
 ?>
 ```
-#### love-stresser.me/componements/php/discord_server.php: Set your Discord server invitation links and codes.
+**love-stresser.me/componements/php/discord_server.php:** Set your Discord server invitation links and codes.
 
 ```php
 <?php
@@ -168,7 +170,7 @@ $server_full_link = 'YOUR_DISCORD_INVITATION';
 $serverInviteCode = 'YOUR_INVITE_CODE';
 ?>
 ```
-#### love-stresser.me/componements/php/plans.php: Configure your automatic purchase links.
+**love-stresser.me/componements/php/plans.php:** Configure your automatic purchase links.
 ```php
 <?php
 $links = [
@@ -186,9 +188,9 @@ $links = [
 ];
 ?>
 ```
-Configure Discord Authentication: Set up the Discord login in the authentication folder.
+Configure Discord Authentication: Set up the Discord login in the **/authentication** folder.
 
-Update Redirect URLs: Ensure all URLs in the application point to your new site.
+Update Discord URLs: Ensure all Discord invite URLs in **love-stresser.me/componements/php/discord_server.php** are correct.
 
 ### 5. Finalize Setup
 
