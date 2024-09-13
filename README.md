@@ -6,14 +6,19 @@
 
 ## 📜 Description
 
-This repository contains the official source code for [love-stresser.me](https://love-stresser.me). It includes essential configurations for Discord alerts, domain management, automatic purchase links via Sellix, and database connections.
+This repository contains the official source code for [love-stresser.me](https://love-stresser.me). The platform provides a powerful stress-testing tool with various features such as customizable profiles, attack systems, animated visuals, member management, blacklist functionality, and a simple admin system.
 
 ## 🚀 Features
 
-- **Discord Alerts**: Automatically sends a Discord alert if the server's dedicated IP is exposed. 📡
-- **Domain Configuration**: Easily update the domains used in the platform. 🌐
-- **Sellix Integration**: Automatic purchase links for various plans using Sellix. 🛒
-- **Database Configuration**: Simple setup for MySQL database connections. 🗄️
+- **Customizable Profiles**: Users can personalize their profiles with custom settings and preferences. 🖼️
+- **Plans**: Multiple tiers of subscription plans, each offering different levels of functionality. 💼
+- **Attack System**: Includes a fully-featured attack system for testing with DDoS methods. 💥
+- **Animated Visuals**: The platform offers visually engaging and animated interfaces for a dynamic user experience. 🎨
+- **Member Page**: A dedicated page where all registered users can manage their accounts. 👥
+- **Blacklist System**: Securely manages and blocks blacklisted users from accessing the platform. 🚫
+- **Simple Administration System**: An easy-to-use admin panel to manage users, plans, and platform settings. 🛠️
+- **IP Grabber Integration**: Contains folders for domain IP grabbers to track IP addresses. 📡
+- **Alert System**: The HTML folder includes a mechanism to send an alert if the page is loaded or "pinged," indicating whether the IP has been discovered. 🚨
 
 ## 🛠️ Prerequisites
 
@@ -54,7 +59,7 @@ Before setting up the platform, ensure you have the following installed on your 
     sudo apt install phpmyadmin
     ```
 
-5. **Configure Database**:
+5. **Configure the Database**:
     In the file `love-stresser.me/componements/php/database_conn.php`, update the database credentials:
     ```php
     $servername = "localhost";
@@ -63,7 +68,7 @@ Before setting up the platform, ensure you have the following installed on your 
     $dbname = "YOUR_DATABASE_NAME";
     ```
 
-6. **Configure Webhooks**:
+6. **Set up Discord Webhooks**:
     In the file `html/index.php`, set up your Discord webhook for IP exposure alerts:
     ```javascript
     const webhookUrl = "YOUR_DISCORD_WEBHOOK";
@@ -102,14 +107,30 @@ Before setting up the platform, ensure you have the following installed on your 
 2. **Access phpMyAdmin**:
     Open your browser and navigate to `http://YOUR_SERVER_IP/phpmyadmin` to manage your database.
 
-3. **Monitor IP Exposure**:
-    The Discord webhook will notify you if your server's IP is discovered.
+3. **User Registration and Profile Customization**:
+    Users can sign up, log in, and customize their profiles directly from the platform.
+
+4. **Plan Management**:
+    Users can view and select different subscription plans, including free and paid tiers.
+
+5. **Attack System**:
+    Once registered, users can access the stress-testing feature to conduct attacks.
+
+6. **Admin Dashboard**:
+    Manage user accounts, monitor usage, and control blacklisted members from the easy-to-use admin dashboard.
+
+7. **IP Grabber Integration**:
+    Utilize the folders for domain IP grabbers to monitor and track IP addresses effectively.
+
+8. **Alert System**:
+    The HTML folder includes a script that triggers an alert if the page is loaded or "pinged," helping to detect if an IP has been discovered.
 
 ## ⚠️ Notes
 
-- **Ensure Correct Permissions**: Make sure your web server and phpMyAdmin are correctly set up to avoid security issues.
-- **Sellix Integration**: Use valid Sellix links to manage the automatic purchase system for users.
+- **Permissions**: Make sure the platform has the correct permissions set for server security.
+- **Sellix Integration**: Ensure all Sellix links are correctly configured for automatic purchases.
+- **Monitoring IP Exposure**: Configure your Discord webhook to receive alerts if your server's IP is exposed.
 
 ---
 
-This project is provided "as-is" without any warranties. Use at your own risk. 🌐
+This project is provided "as-is" without any warranties. Use responsibly and at your own risk. 🌐
