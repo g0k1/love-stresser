@@ -1,33 +1,33 @@
 # ![Logo](https://i.ibb.co/d5TBCCz/logo.png)
 
-# 📃 | The Official Source Code for love-stresser.me
+# [📃](https://github.com/g0k1/love-stresser) | The Official Source Code for love-stresser.me
 
-## 📜 Description
+## [📜](https://github.com/g0k1/love-stresser) Description
 
-Welcome to the official source code for [love-stresser.me](https://love-stresser.me)! This project provides a robust platform for stress-testing with a range of features, including customizable profiles, attack systems, member management, and more.
+Welcome to the official source code for love-stresser.me! This project provides a robust platform for stress-testing with a range of features, including customizable profiles, attack systems, member management, and more.
 
-## 🚀 Features
+## [🚀](https://github.com/g0k1/love-stresser) Features
 
-- **Customizable Profiles**: Personalize user profiles with custom settings. 🖼️
-- **Subscription Plans**: Various tiers of plans to suit different needs. 💼
-- **Attack System**: Advanced tools for executing stress tests. 💥
-- **Animated Visuals**: Engaging user interfaces with animations. 🎨
-- **Member Management**: Manage user accounts and memberships. 👥
-- **Blacklist System**: Control access with a blacklist feature. 🚫
-- **Simple Admin Dashboard**: Easy management of users and settings. 🛠️
-- **IP Grabber Integration**: Track IP addresses through designated folders. 📡
-- **Alert System**: Receive Discord notifications if your IP is discovered. 🚨
-- **Discord Authentication**: Configure login via Discord. 🔐
+- **Customizable Profiles**: Personalize user profiles with custom settings. [🖼️](https://github.com/g0k1/love-stresser)
+- **Subscription Plans**: Various tiers of plans to suit different needs. [💼](https://github.com/g0k1/love-stresser)
+- **Attack System**: Advanced tools for executing stress tests. [💥](https://github.com/g0k1/love-stresser)
+- **Animated Visuals**: Engaging user interfaces with animations. [🎨](https://github.com/g0k1/love-stresser)
+- **Member Management**: Manage user accounts and memberships. [👥](https://github.com/g0k1/love-stresser)
+- **Blacklist System**: Control access with a blacklist feature. [🚫](https://github.com/g0k1/love-stresser)
+- **Simple Admin Dashboard**: Easy management of users and settings. [🛠️](https://github.com/g0k1/love-stresser)
+- **IP Grabber Integration**: Track IP addresses through designated folders. [📡](https://github.com/g0k1/love-stresser)
+- **Alert System**: Receive Discord notifications if your IP is discovered. [🚨](https://github.com/g0k1/love-stresser)
+- **Discord Authentication**: Configure login via Discord. [🔐](https://github.com/g0k1/love-stresser)
 
-## 🛠️ Prerequisites
+## [🛠️](https://github.com/g0k1/love-stresser) Prerequisites
 
 Ensure you have the following installed on your server:
 
-##### 1. **Web Server**: Nginx or Apache. 🌐
-##### 2. **PHP**: Including required extensions. 🔧
-##### 3. **phpMyAdmin**: For managing your MySQL database. 📊
+##### 1. **Web Server**: Nginx or Apache. [🌐](https://github.com/g0k1/love-stresser)
+##### 2. **PHP**: Including required extensions. [🔧](https://github.com/g0k1/love-stresser)
+##### 3. **phpMyAdmin**: For managing your MySQL database. [📊](https://github.com/g0k1/love-stresser)
 
-## 📥 Installation
+## [📥](https://github.com/g0k1/love-stresser) Installation
 
 ### 1. Connect to Your Server
 
@@ -201,9 +201,14 @@ sudo systemctl restart apache2  # For Apache
 ```
 Verify Installation: Open your web browser and navigate to **http://your_domain_or_ip** to check if the application is running.
 
-📺 Preview
+[📺](https://github.com/g0k1/love-stresser) Preview
 Check out the preview video for a walkthrough of the website setup and features.
 
-⚠️ Notes
+[⚠️](https://github.com/g0k1/love-stresser) Notes
 Permissions: Ensure the server has the necessary permissions for the application files.
 Compliance: Follow all applicable guidelines and terms of service to avoid misuse of the application.
+
+## Made with [🤍](https://github.com/g0k1/love-stresser) by
+
+- **@Meandoyou** (*goki*)
+- **@StingAving** (*stingaving*)
