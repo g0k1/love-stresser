@@ -30,13 +30,33 @@ Before setting up the platform, ensure you have the following installed on your 
 
 ## 📥 Installation
 
-1. **Clone the repository**:
+1. **Connect to your server** (if not already connected):
     ```bash
-    git clone https://github.com/YOUR_USERNAME/love-stresser-source.git
+    ssh username@your_server_ip
+    ```
+
+2. **Navigate to the `/var/www/` directory**:
+    ```bash
+    cd /var/www/
+    ```
+
+3. **Clone the repository** into the `/var/www/` directory:
+    ```bash
+    sudo git clone https://github.com/YOUR_USERNAME/love-stresser-source.git
+    ```
+
+4. **Navigate to the cloned directory**:
+    ```bash
     cd love-stresser-source
     ```
 
-2. **Install Nginx or Apache**:
+5. **Set the correct permissions** so that the web server can read and write to this directory:
+    ```bash
+    sudo chown -R www-data:www-data /var/www/love-stresser-source
+    sudo chmod -R 755 /var/www/love-stresser-source
+    ```
+
+6. **Install Nginx or Apache** if not already installed:
     - **For Nginx**:
       ```bash
       sudo apt update
@@ -49,17 +69,85 @@ Before setting up the platform, ensure you have the following installed on your 
       sudo apt install apache2
       ```
 
-3. **Install PHP and required extensions**:
+7. **Install PHP and required extensions**:
     ```bash
     sudo apt install php php-cli php-fpm php-mysql php-curl php-json php-gd php-mbstring
     ```
 
-4. **Install phpMyAdmin**:
+8. **Install phpMyAdmin**:
     ```bash
     sudo apt install phpmyadmin
     ```
 
-5. **Configure the Database**:
+9. **Configure your web server** to serve the application:
+
+   - **For Nginx**:
+     Create a configuration file for Nginx:
+     ```bash
+     sudo nano /etc/nginx/sites-available/love-stresser
+     ```
+     Add the following configuration:
+     ```nginx
+     server {
+         listen 80;
+         server_name your_domain_or_ip;
+
+         root /var/www/love-stresser-source;
+         index index.php index.html index.htm;
+
+         location / {
+             try_files $uri $uri/ =404;
+         }
+
+         location ~ \.php$ {
+             include snippets/fastcgi-php.conf;
+             fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+             include fastcgi_params;
+         }
+
+         location ~ /\.ht {
+             deny all;
+         }
+     }
+     ```
+
+     Enable the configuration:
+     ```bash
+     sudo ln -s /etc/nginx/sites-available/love-stresser /etc/nginx/sites-enabled/
+     sudo systemctl restart nginx
+     ```
+
+   - **For Apache**:
+     Create a configuration file for Apache:
+     ```bash
+     sudo nano /etc/apache2/sites-available/love-stresser.conf
+     ```
+     Add the following configuration:
+     ```apache
+     <VirtualHost *:80>
+         ServerAdmin webmaster@your_domain_or_ip
+         DocumentRoot /var/www/love-stresser-source
+         ServerName your_domain_or_ip
+
+         <Directory /var/www/love-stresser-source>
+             AllowOverride All
+             Require all granted
+         </Directory>
+
+         ErrorLog ${APACHE_LOG_DIR}/error.log
+         CustomLog ${APACHE_LOG_DIR}/access.log combined
+     </VirtualHost>
+     ```
+
+     Enable the configuration and rewrite module:
+     ```bash
+     sudo a2ensite love-stresser.conf
+     sudo a2enmod rewrite
+     sudo systemctl restart apache2
+     ```
+
+10. **Configure the Database**:
     In the file `love-stresser.me/componements/php/database_conn.php`, update the database credentials:
     ```php
     $servername = "localhost";
@@ -68,19 +156,19 @@ Before setting up the platform, ensure you have the following installed on your 
     $dbname = "YOUR_DATABASE_NAME";
     ```
 
-6. **Set up Discord Webhooks**:
+11. **Set up Discord Webhooks**:
     In the file `html/index.php`, set up your Discord webhook for IP exposure alerts:
     ```javascript
     const webhookUrl = "YOUR_DISCORD_WEBHOOK";
     ```
 
-7. **Configure Domain Names**:
+12. **Configure Domain Names**:
     In the file `love-stresser.me/IP/index.php` (lines 511 to 514), update the domain values:
     ```html
     <option value="YOUR_DOMAIN" class="domain">YOUR_DOMAIN</option>
     ```
 
-8. **Configure Sellix Links**:
+13. **Configure Sellix Links**:
     In the file `love-stresser.me/componements/php/plans.php` (lines 132 to 144), update the Sellix links:
     ```php
     $links = [
