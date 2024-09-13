@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.love-stresser.me/sitemap.xml
