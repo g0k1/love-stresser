@@ -212,3 +212,4 @@ Compliance: Follow all applicable guidelines and terms of service to avoid misus
 
 - **@Meandoyou** (*goki*)
 - **@StingAving** (*stingaving*)
+- This site was dev in no case by some ZEY or KZE, Meandoyou / stingaving are the only developper of Love-stresser.me !
