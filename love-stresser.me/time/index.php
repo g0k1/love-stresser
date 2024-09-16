@@ -1,5 +1,5 @@
-
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 $file = '../authentication/handler/status/status.json';
 $status = json_decode(file_get_contents($file), true);
 if ($status['status'] === 'offline') {
