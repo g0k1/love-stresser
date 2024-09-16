@@ -1,7 +1,6 @@
 <?php
-// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 include("../../componements/php/root_domain.php");
-sleep(10);
+// sleep(10);
 ?>
 <html class="no-js" lang="en-US"><!--<![endif]--><head>
 
@@ -147,7 +146,7 @@ echo $userIP;
 
 </body></html>
 <style>
-/*! CSS Used from: https://love-stresser.me/cdn-cgi/styles/main.css */
+/*! CSS Used from: https://<?php echo $root_domain ?>/cdn-cgi/styles/main.css */
 .bg-center{background-position:50%;}
 .bg-no-repeat{background-repeat:no-repeat;}
 .border-gray-300{--border-opacity:1;border-color:#ebebeb;border-color:rgba(235,235,235,var(--border-opacity));}
@@ -213,11 +212,11 @@ strong{font-weight:600;}
 @media screen and (max-width:720px){
 .cf-error-source:after{display:none;}
 }
-.cf-icon-browser{background-image:url(https://love-stresser.me/help/cgu/cdn-cgi/images/cf-icon-browser_white.png);}
-.cf-icon-cloud{background-image:url(https://love-stresser.me/help/cgu/cdn-cgi/images/cf-icon-cloud_white.png);}
-.cf-icon-server{background-image:url(https://love-stresser.me/help/cgu/cdn-cgi/images/cf-icon-server_white.png);}
-.cf-icon-ok{background-image:url(https://love-stresser.me/help/cgu/cdn-cgi/images/cf-icon-ok.png);}
-.cf-icon-error{background-image:url(https://love-stresser.me/help/cgu/cdn-cgi/images/cf-icon-error.png);}
+.cf-icon-browser{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-browser_white.png);}
+.cf-icon-cloud{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-cloud_white.png);}
+.cf-icon-server{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-server_white.png);}
+.cf-icon-ok{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-ok.png);}
+.cf-icon-error{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-error.png);}
 .cf-error-footer .hidden{display:none;}
 .cf-error-footer .cf-footer-ip-reveal-btn{-webkit-appearance:button;-moz-appearance:button;appearance:button;text-decoration:none;background:none;color:inherit;border:none;padding:0;font:inherit;cursor:pointer;color:#0051c3;-webkit-transition:color .15s ease;transition:color .15s ease;}
 .cf-error-footer .cf-footer-ip-reveal-btn:hover{color:#ee730a;}
