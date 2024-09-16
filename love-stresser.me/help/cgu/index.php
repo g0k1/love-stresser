@@ -1,6 +1,6 @@
 <?php
 include("../../componements/php/root_domain.php");
-// sleep(10);
+sleep(10);
 ?>
 <html class="no-js" lang="en-US"><!--<![endif]--><head>
 
@@ -212,11 +212,11 @@ strong{font-weight:600;}
 @media screen and (max-width:720px){
 .cf-error-source:after{display:none;}
 }
-.cf-icon-browser{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-browser_white.png);}
-.cf-icon-cloud{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-cloud_white.png);}
-.cf-icon-server{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-server_white.png);}
-.cf-icon-ok{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-ok.png);}
-.cf-icon-error{background-image:url(https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-error.png);}
+.cf-icon-browser{background-image:url('https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-browser_white.png');}
+.cf-icon-cloud{background-image:url('https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-cloud_white.png');}
+.cf-icon-server{background-image:url('https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-server_white.png');}
+.cf-icon-ok{background-image:url('https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-ok.png');}
+.cf-icon-error{background-image:url('https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/cf-icon-error.png');}
 .cf-error-footer .hidden{display:none;}
 .cf-error-footer .cf-footer-ip-reveal-btn{-webkit-appearance:button;-moz-appearance:button;appearance:button;text-decoration:none;background:none;color:inherit;border:none;padding:0;font:inherit;cursor:pointer;color:#0051c3;-webkit-transition:color .15s ease;transition:color .15s ease;}
 .cf-error-footer .cf-footer-ip-reveal-btn:hover{color:#ee730a;}
