@@ -18,6 +18,7 @@ Welcome to the official source code for love-stresser.me! This project provides 
 - **IP Grabber Integration**: Track IP addresses through designated folders. [📡](https://github.com/g0k1/love-stresser)
 - **Alert System**: Receive Discord notifications if your IP is discovered. [🚨](https://github.com/g0k1/love-stresser)
 - **Discord Authentication**: Configure login via Discord. [🔐](https://github.com/g0k1/love-stresser)
+- **Multi-Domains Support**: You can use multiple domains on the same website! (Just make your domains point to your server's IP address and add them to your webserver our site will automatically change the redirect links) [🌐](https://github.com/g0k1/love-stresser)
 
 ## [🛠️](https://github.com/g0k1/love-stresser) Prerequisites
 
