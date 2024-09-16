@@ -1,4 +1,5 @@
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 include("../componements/php/discord_server.php");
 if (isset($_COOKIE['LS_ASP']) && !empty($_COOKIE['LS_ASP'])) {
     $token = $_COOKIE['LS_ASP'];
