@@ -259,7 +259,7 @@ strong{font-weight:600;}
 .lg\:pt-6{padding-top:1.5rem;}
 .lg\:w-full{width:100%;}
 }
-body{background-image:url('https://love-stresser.me/help/cgu/cdn-cgi/images/love_bg_clear_zoomed.png');background-size:cover;background-position:center;}
+body{background-image:url('https://<?php echo $root_domain ?>/help/cgu/cdn-cgi/images/love_bg_clear_zoomed.png');background-size:cover;background-position:center;}
 .bg-gradient-gray{position:relative;}
 .bg-gradient-gray {
     background-color: rgba(255, 255, 255, 0.062);
