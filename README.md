@@ -201,13 +201,13 @@ sudo systemctl restart apache2  # For Apache
 ```
 Verify Installation: Open your web browser and navigate to **http://your_domain_or_ip** to check if the application is running.
 
-Also make sur you set the folders, subfolders, files's permissions to 7777 to read/write/...
+
 
 [📺](https://github.com/g0k1/love-stresser) Preview
 Check out the [preview video](https://www.youtube.com/watch?v=Y5-9QIq_HeA) for a walkthrough of the website setup and features.
 
 [⚠️](https://github.com/g0k1/love-stresser) Notes
-Permissions: Ensure the server has the necessary permissions for the application files.
+Permissions: Ensure the server has the necessary permissions for the application files. (Make sur the server's permissions for the folders/subfolders and files are set to 777 or higher).
 Compliance: Follow all applicable guidelines and terms of service to avoid misuse of the application.
 
 ## Made with [🤍](https://github.com/g0k1/love-stresser) by
