@@ -24,7 +24,7 @@ if ($status['status'] === 'offline') {
 session_start();
 include("../componements/php/database_conn.php");
 include("../componements/php/root_domain.php");
-include("./fonts/sort_fonts.php")
+include("./fonts/sort_fonts.php");
 $total_attacks = 0;
 $users_number = 0;
 
