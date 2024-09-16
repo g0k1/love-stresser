@@ -1,4 +1,5 @@
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 include("../../componements/php/api_token.php");
 $attack_id = isset($_GET['id']) ? $_GET['id'] : null;
 $target_id = isset($_GET['target']) ? $_GET['target'] : null;
