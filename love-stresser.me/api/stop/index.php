@@ -1,4 +1,5 @@
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 $attacks_file = '../attacks.json';
 $tokens_file = '../tokens.json';
 
