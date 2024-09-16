@@ -6,6 +6,7 @@
 -- Generation Time: Aug 21, 2024 at 10:51 PM
 -- Server version: 10.11.6-MariaDB-0+deb12u1
 -- PHP Version: 8.2.20
+-- Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
