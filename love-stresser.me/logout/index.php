@@ -13,7 +13,7 @@ session_destroy();
 if (isset($_COOKIE['LS_ASP'])) {
     unset($_COOKIE['LS_ASP']); 
     setcookie('LS_ASP', '', time() - 3600, '/');
-}
+} 
 header("Location: ../home");
 exit;
 ?>
