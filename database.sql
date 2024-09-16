@@ -140,6 +140,7 @@ CREATE TABLE `plan_codes` (
 
 CREATE TABLE `grabber_ids` (
   `id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -317,3 +318,4 @@ ALTER TABLE `users`
 
 ALTER TABLE `attack_logs`
   ADD CONSTRAINT `attack_logs_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+COMMIT;
