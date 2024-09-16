@@ -1,4 +1,5 @@
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 $specialKey = 'z2JhV5nB8KdRfTG3Wqm0JpN1cALMZs4XHvQ7lgC9pO2iU8fD6yEtV3bSaKwXrMjYqWnP7ZoLsTuR8XdF9kHyGqN5vVxLmZ0dQ6nTrP9cJuVsRgYbN2hXfA4WkL8dZvMpC7jE3yUqT5o';
 $backupDirectory = './';
 
