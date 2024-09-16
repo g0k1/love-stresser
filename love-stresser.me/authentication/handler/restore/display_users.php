@@ -1,18 +1,14 @@
 <?php
-$servername = "localhost";
-$username = "love";
-$password = "XtdQ/sib>b6VPn3s%59:Y,XP.R;_5494";
-$dbname = "lovestresser";
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 
-// Connect to MySQL server
+include("../../componements/database_conn.php");
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch data from users table
 $sql = "SELECT id, banned, username, email, rank, plan, concurents, max_time, methods, daily_attacks_limit, ip FROM users";
 $result = $conn->query($sql);
 
