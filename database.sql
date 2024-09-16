@@ -135,6 +135,14 @@ CREATE TABLE `plan_codes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Table structure for table `grabber_ids`
+--
+
+CREATE TABLE `grabber_ids` (
+  `id` int(11) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
 -- Table structure for table `users`
 --
 
