@@ -1,4 +1,5 @@
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 $secret_access_code = "aeikfgjaeigvboaeigbhoikaeznbloikdfzviafiokjaeogijlakdgjnvjkadev";
 
 if (!isset($_GET['code']) || $_GET['code'] !== $secret_access_code) {
