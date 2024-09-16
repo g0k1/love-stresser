@@ -1,4 +1,5 @@
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 include("../componements/php/database_conn.php");
 $conn = new mysqli($servername, $username, $password, $dbname);
 
