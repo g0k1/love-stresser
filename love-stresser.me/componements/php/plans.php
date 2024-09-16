@@ -1,4 +1,5 @@
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 $plan_styles = [
     'free' => [
         'style' => 'background: linear-gradient(90deg, #32CD32, #00FF00); -webkit-background-clip: text; color: transparent; text-shadow: 0 0 5px rgba(0, 255, 0, 0.5); text-transform: uppercase;',
