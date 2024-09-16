@@ -1,22 +1,17 @@
 <?php
-// Define the path to the JSON file and the correct password
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 $file = 'status.json';
 $correctKey = 'g5ze4g5z4bzr544hg3a21ef54er4h685zr4g65a4eg';
 
-// Check if the JSON file exists
 if (!file_exists($file)) {
-    // Create the JSON file with default status
     $status = ['status' => 'offline'];
     file_put_contents($file, json_encode($status));
 }
 
-// Read the current status from the JSON file
 $status = json_decode(file_get_contents($file), true);
 
-// Check if a key is provided in the URL and is correct
 $keyValid = isset($_GET['key']) && $_GET['key'] === $correctKey;
 
-// Toggle the status when the button is clicked and the key is valid
 if ($keyValid && isset($_POST['toggle'])) {
     $status['status'] = ($status['status'] === 'online') ? 'offline' : 'online';
     file_put_contents($file, json_encode($status));
