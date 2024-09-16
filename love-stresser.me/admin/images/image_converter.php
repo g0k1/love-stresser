@@ -5,7 +5,7 @@ if (!isset($_GET['key']) || $_GET['key'] !== $specialKey) {
     die('Access denied: Invalid key.');
 }
 
-$dbConnFile = realpath('../../../componements/php/database_conn.php');
+$dbConnFile = realpath('../../componements/php/database_conn.php');
 
 if (!file_exists($dbConnFile)) {
     die('Error: Database connection file not found.');
