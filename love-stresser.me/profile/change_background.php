@@ -1,4 +1,5 @@
 <?php
+// Made by Meandoyou and StingAving https://github.com/g0k1/love-stresser
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
