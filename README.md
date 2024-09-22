@@ -1,5 +1,5 @@
 # ![Logo](https://i.ibb.co/d5TBCCz/logo.png)
-
+YOU DO NOT HAVE THE RIGHT TO REUSE THE LOVE-STRESSER LOGO AND NAME FOR YOUR SITES.
 # [📃](https://github.com/g0k1/love-stresser) | The Official Source Code for love-stresser.me
 
 ## [📜](https://github.com/g0k1/love-stresser) Description
